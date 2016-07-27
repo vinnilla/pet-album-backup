@@ -1,0 +1,19 @@
+<% form_tag users_path, :method => :get do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+  <% end %>
+<div id="wrapper">
+	<div id="columns">	
+		<% (@pet_array.length).times do |x| %>
+			<div class="pin">
+				<%= link_to "", follow_pet_path(@pet_array[x].id), class:"fa fa-heart-o follow" %>
+				<%= image_tag @photo_array[x].avatar_url(:thumb).to_s %><br>
+				<%= link_to @pet_array[x].name, pet_path(@pet_array[x].id) %>
+				<p><%="#{@pet_array[x].gender} #{@pet_array[x].breed}"%></p>
+				<p><%=@pet_array[x].bio%></p>
+			</div>
+		<% end %>
+	</div>
+</div>

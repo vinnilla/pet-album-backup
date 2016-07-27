@@ -1,0 +1,28 @@
+<%= form_for(@photo, url: update_photo_path) do |f| %>
+
+  <% if @photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+
+      <ul>
+      <% @photo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="form_box form-horizontal">
+    <h1>Edit Photo</h1>
+    <div class="form-group first">
+      <%= f.label "Description", class:"col-md-3 lower"%>
+      <div class="col-md-9">      
+        <%= f.text_field :description, class:"form-control", autofocus: true, autocomplete: "off" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Save", class: "button"%>
+  </div>
+
+<% end %>
+

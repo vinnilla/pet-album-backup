@@ -1,0 +1,11 @@
+<div class="container-fluid box">
+	<h1>Photos</h1>
+	<div class="pet spacer"><%= link_to "Create Photo", new_photo_path(@album_id) %></div>
+	<div class="row last">
+		<% @photos.each do |photo| %>			
+			<div class="col-xs-4 col-sm-4 col-md-4 pet">
+				<%= link_to photo.description, photo_path(photo.id) %>
+			</div>
+		<% end %>
+	</div>
+</div>

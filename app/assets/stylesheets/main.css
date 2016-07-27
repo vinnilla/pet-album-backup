@@ -1,0 +1,298 @@
+HEADER*/
+/*------*/
+.link a {
+	line-height: 4em;
+	color: white;
+	font-size: 1.2em;
+}
+
+a {
+	color: rgba(0,0,0,0.7) !important;
+	text-decoration: underline !important;
+}
+
+.link {
+	line-height: 50px;
+	font-size: 25px;
+	text-align: right;
+}
+
+.navigation {
+	background-color: black;
+	box-shadow: 1px 5px 5px gray;
+}
+
+.navigation a {
+	color: white !important;
+	opacity: 1;
+	text-decoration: none !important;
+}
+
+
+.navigation a:hover {
+	color: rgba(255, 255, 255, 0.5) !important;
+	text-decoration: none !important;
+}
+/*
+a {
+	color:white !important;
+	opaciy: 0.7;
+}
+
+a:hover {
+	opacity: 1;
+}
+*/
+.logo a {
+	font-size: 2.5em;
+}
+.logo {
+	margin-top: 0.4em;
+}
+
+/*FORMS*/
+/*-----*/
+.field {
+	font-size: 1.2em;
+}
+/*.entry, .button{
+	border-style: solid;
+	border-color: rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.2);
+	margin-bottom: 2em;
+}*/
+.form_box {
+	max-width: 400px;
+	min-width: 200px;
+	margin: 0 auto;
+	text-align: center;
+}
+.lower {
+	line-height: 35px;
+}
+/*PetsMAIN*/
+/*---------*/
+.pet-link {
+	position:relative;
+	margin-bottom: 10em;
+	display: inline-block;
+}
+.pet a, .spacer a, .pet-link {
+	color: black;
+}
+.pet {
+	color: black;
+	padding: 0 auto !important;
+}
+.pet a:hover, .pet-link a:hover, .spacer a:hover {
+	opacity: 0.8;
+	text-decoration:none !important;
+}
+
+/*GENERAL*/
+/*-------*/
+body {
+	font-family: 'Roboto', sans-serif !important;
+	color: black !important;
+}
+.title {
+	font-size: 2em;
+	position: relative;
+}
+.larger {
+	font-size: 2em;
+	/*position:absolute;
+	bottom: 10px;
+	left: 20px;
+	background-color: rgba(0,0,0,0.8);*/
+}
+.spacer {
+	margin-bottom: 2em;
+}
+
+.box {
+	max-width: 98%;
+/*
+	background-image: url(/assets/tree.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+*/	
+	min-height: 850px;
+	text-align: center;
+/*	border-radius: 50px;*/
+}
+
+
+.left {
+	margin-top: 2%;
+	text-align: left !important;
+}
+
+.image {
+	width: auto;
+	background-position:center;
+	background-size: cover;
+}
+
+.header {
+	padding-bottom: 15px;
+}
+
+.forceright {
+	margin-right: 70px;
+}
+
+.space {
+	width: 10px !important;
+	height: auto;
+	display:inline;
+}
+
+.photo {
+	border: solid 5px rgba(0,0,0,.8);
+	opacity: 0.85;
+}
+.photo:hover {
+	opacity: 1;
+}
+.page {
+	text-align: left;
+}
+
+
+/*SEARCH BAR*/
+.clear {
+	background-color: rgba(0,0,0,0);
+	border: none;
+	color: white;
+	font-size: 15px;
+}
+#search-form {
+	display:inline;
+}
+.search-bar {
+	margin-top: 15px;
+}
+.hidden_click{
+	opacity:0;
+	position:relative;
+	top: 2px;
+	right: 18px;
+}
+.merge {
+	position:relative;
+}
+
+
+/*FOLLOW BUTTON*/
+.follow {
+	position: relative;
+	top: 35px;
+	left: 15px;
+	color: white !important;
+	font-size: 20px !important;
+	z-index: 1;
+	opacity: 1;
+	text-decoration:none !important;
+}
+.follow:hover{
+	color: red !important;
+}
+
+
+/*PINTEREST LAYOUT*/
+#wrapper {
+	width: 95%;
+	max-width: 1800px;
+	min-width: 500px;
+	margin: 50px auto;
+}
+
+#columns {
+	-webkit-column-count: 3;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 3;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 2;
+	column-gap: 15px;
+	column-fill: auto;
+}
+
+.pin {
+	display: inline-block;
+	background: #FEFEFE !important;
+	border: 2px solid #FAFAFA;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+	padding: 15px;
+	padding-bottom: 5px;
+	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+	opacity: 0.8;
+	
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+.pin img {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+	opacity: 0.9;
+}
+
+.pin a, .pin p {
+	color: #333;
+	opacity: 0.9;
+	margin: 0;
+}
+
+.pin a:hover {
+	text-decoration: none !important;
+}
+
+@media (min-width: 660px) {
+	#columns {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+	}
+}
+
+@media (min-width: 1100px) {
+	#columns {
+		-webkit-column-count: 5;
+		-moz-column-count: 5;
+		column-count: 5;
+	}
+}
+
+.pin:hover {
+	opacity: 1;
+}
+
+.name {
+	font-size: 2em;
+}
+
+
+/*
+@mixin box_sizing {
+ -moz-box-sizing:    border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing:         border-box;
+}
+.debug_dump {
+ clear: both;
+ float: left;
+ width: 100%;
+ margin-top: 45px;
+ @include box_sizing;
+}

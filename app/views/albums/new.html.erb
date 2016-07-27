@@ -1,0 +1,40 @@
+<%= form_for(@album, url: create_album_path) do |f| %>
+
+  <% if @album.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
+
+      <ul>
+      <% @album.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form_box form-horizontal">
+    <h1>New Album</h1>
+    <div class="form-group first">
+      <%= f.label "Title", class:"col-md-3 lower"%>
+      <div class="col-md-9">      
+        <%= f.text_field :title, class:"form-control", placeholder: "Title", autofocus: true, autocomplete: "off" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label "Description", class:"col-md-3 lower" %>
+      <div class="col-md-9">      
+        <%= f.text_field :description, class:"form-control", placeholder: "Description", autocomplete: "off" %>
+      </div>
+    </div>
+
+    <!-- hidden field to add relationship between pet and current user -->
+    <%= f.hidden_field :pet_id, :value => @pet_id %>
+
+    <div class="form-group">
+      <%= f.submit "Save", class: "button"%>
+    </div>
+  </div>
+
+<% end %>
+
+  

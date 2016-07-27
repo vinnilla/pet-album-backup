@@ -1,0 +1,42 @@
+<%= form_for(@pet, url: pets_path) do |f| %>
+
+  <% if @pet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pet.errors.count, "error") %> prohibited this pet from being saved:</h2>
+
+      <ul>
+      <% @pet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="box">
+  <div class="field row">
+    <%= f.label "Name", class:"col-xs-1 col-sm-1 col-md-1 col-xs-offset-3 col-sm-offset-3 col-md-offset-4" %>
+    <%= f.text_field :name, class:"col-xs-6 col-sm-4 col-md-2 entry", autofocus: true, autocomplete: "off" %>
+  </div>
+  <div class="field row">
+    <%= f.label "Gender", class:"col-xs-1 col-sm-1 col-md-1 col-xs-offset-3 col-sm-offset-3 col-md-offset-4" %>
+    <%= f.text_field :gender, class:"col-xs-6 col-sm-4 col-md-2 entry", autocomplete: "off" %>
+  </div>
+  <div class="field row">
+    <%= f.label "Breed", class:"col-xs-1 col-sm-1 col-md-1 col-xs-offset-3 col-sm-offset-3 col-md-offset-4" %>
+    <%= f.text_field :breed, class:"col-xs-6 col-sm-4 col-md-2 entry", autocomplete: "off" %>
+  </div>
+  <div class="field row">
+    <%= f.label "Bio", class:"col-xs-1 col-sm-1 col-md-1 col-xs-offset-3 col-sm-offset-3 col-md-offset-4" %>
+    <%= f.text_field :bio, class:"col-xs-6 col-sm-4 col-md-2 entry", autocomplete: "off" %>
+  </div>
+
+  <!-- hidden field to add relationship between pet and current user -->
+  <div class="field">
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+  </div>
+
+  <div class="actions row">
+    <%= f.submit "Save", class: "button"%>
+  </div>
+</div>
+
+<% end %>

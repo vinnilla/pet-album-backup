@@ -1,0 +1,18 @@
+<div id="wrapper" class="box">
+	<h4 class="title">Your Pets</h4>
+	<div class="spacer">
+	<%= link_to "Create New Pet", 'pets/new', class: 'pet'%> <br>
+	</div>
+	<div id="columns">
+			<% @pets.each do |pet| %>
+				<div class="pin">
+					<%= link_to pet.name, pet_path(pet.id), class: 'name' %> <br>
+					<p><%= "#{pet.gender} #{pet.breed}" %></p> 
+					<p><%= pet.bio %></p> <br>
+					<%= link_to 'edit', edit_pet_path(pet.id) %> &nbsp; &nbsp;
+					<%= link_to 'delete', pet_path(pet.id), :method => :delete %> &nbsp; &nbsp;
+					<%= link_to "create album", new_album_path(pet.id) %>
+				</div>
+			<% end %>
+	</div>
+</div>

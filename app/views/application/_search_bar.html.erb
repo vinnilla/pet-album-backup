@@ -1,0 +1,6 @@
+<%= form_tag users_path, :method => 'get', id:"search-form" do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Pets", class:"clear" %>
+    <a class="fa fa-search merge" aria-hidden="true">
+    	<%= submit_tag "", :name => nil, class:"hidden_click" %>
+    </a>
+<% end %>

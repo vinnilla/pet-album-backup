@@ -1,0 +1,24 @@
+<header>
+	<div class="container-fluid header">
+		<div class="row navigation">
+			<div class="col-xs-5 col-sm-3 col-md-3 logo">
+        <%= link_to "Pet Album", users_path %>
+      </div>
+      <% if user_signed_in? %>
+        <div class="col-xs-6 col-sm-5 col-md-4 col-xs-offset-1 col-sm-offset-5 col-md-5 link">
+          <%= render 'search_bar' %> 
+          &nbsp; &nbsp;
+          <%= link_to "", pets_path, class:"fa fa-user" %>
+          &nbsp; &nbsp; &nbsp;
+          <%= link_to '', destroy_user_session_path, :method => :delete, class:"fa fa-sign-out" %>
+        </div>
+      <% else %>
+        <div class="col-xs-3 col-sm-2 col-md-2 col-xs-offset-4 col-sm-offset-7 col-md-offset-7 link">
+          <%= link_to '', new_user_registration_path, class: "fa fa-user-plus" %>
+          &nbsp; &nbsp; &nbsp;
+          <%= link_to '', new_user_session_path, class: "fa fa-sign-in" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</header>

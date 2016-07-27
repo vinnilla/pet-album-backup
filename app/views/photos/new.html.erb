@@ -1,0 +1,44 @@
+<%= form_for @photo, :url => create_photo_path do |f| %>
+
+  <% if @photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+
+      <ul>
+      <% @photo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form_box form-horizontal">
+    <h1>New Photo</h1>
+    <div class="form-group first">
+      <%= f.label "Description", class:"col-md-3 lower"%>
+      <div class="col-md-9">      
+        <%= f.text_field :description, class:"form-control", placeholder: "Description", autofocus: true, autocomplete: "off" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label "Upload File", class:"col-md-3 lower"%>
+      <div class="col-md-9">      
+        <%= f.file_field :avatar, class:"form-control"%>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label "or image URL", class:"col-md-3 lower"%>
+      <div class="col-md-9">      
+        <%= f.text_field :remote_avatar_url, class:"form-control", placeholder: "Image URL", autocomplete: "off" %>
+      </div>
+    </div>
+    <!-- hidden field to add relationship between photo and current album -->
+    <%= f.hidden_field :album_id, :value => @album_id %>
+
+    <div class="form-group">
+      <%= f.submit "Save", class: "button"%>
+  </div>
+
+<% end %>
+
+  

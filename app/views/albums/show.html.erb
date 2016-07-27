@@ -1,0 +1,28 @@
+<div class="box" id="wrapper">
+	<header>
+		<h1><%= "#{@album.title} Album" %></h1>
+		<p><%= @album.description %></p>
+	</header>
+	<div class="pet last">
+		<% if @pet[0].user_id == current_user.id %>
+			<%= link_to "Edit", edit_album_path(@pet_id, @album.id) %> &nbsp;&nbsp;
+			<%= link_to "Delete", album_path(@pet_id, @album.id), :method => :delete %> &nbsp;&nbsp;
+			<%= link_to "Add Photo", new_photo_path(@pet_id, @album.id) %><br>
+		<% end %>
+
+		<%= link_to "Back to Pet Page", pet_path(@pet_id) %>
+		<!-- 
+		<%= link_to "All Albums", albums_path(@album.pet_id) %><br>
+		 -->
+	</div>
+	<!-- display photos -->
+	<h2 class="page">Photos</h2>
+	<div id="columns">
+		<% @photos.each do |photo| %>
+			<div class="pin">
+			  <%= image_tag photo.avatar_url(:thumb).to_s %>
+				<%= link_to photo.description, photo_path(@pet_id, @album.id, photo.id) %>
+			</div>
+		<% end %>
+	</div>
+</div>

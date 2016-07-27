@@ -1,0 +1,26 @@
+<div id="wrapper" class="box">
+	<header>
+		<h1 class="title"><%= @pet.name %></h1>
+		<h4><%= "#{@pet.gender} #{@pet.breed}" %></h4>
+		<p><%= @pet.bio %></p>
+	</header>
+	
+	<div class="pet last">
+		<% if @pet.user_id == current_user.id %>
+			<%= link_to "Create Album", new_album_path(@pet.id) %>
+		<%end %>
+	</div>
+	<h2 class="page">Albums</h2>
+	<div id="columns">
+		<% counter = 0 %>
+		<% @albums.each do |album| %>
+			<div class="pin">
+				<% if @photos.length != counter %>
+					<%= image_tag @photos[counter].avatar_url(:thumb).to_s %> <br>
+					<% counter += 1 %>
+				<% end %>
+				<%= link_to album.title, album_path(@pet.id, album.id), class: "larger" %>
+			</div>
+		<% end %>
+	</div>
+</div>
