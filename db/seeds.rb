@@ -79,8 +79,7 @@ Album.create!([
   {title: "profile", description: "", likes: nil, pet_id: 35},
   {title: "profile", description: "", likes: nil, pet_id: 36},
   {title: "profile", description: "", likes: nil, pet_id: 37},
-  {title: "profile", description: "", likes: nil, pet_id: 39},
-  {title: "profile", description: "", likes: nil, pet_id: 40}
+  {title: "profile", description: "", likes: nil, pet_id: 39}
 ])
 Photo.create!([
   {description: "arm rest", likes: nil, album_id: 2, avatar: "WP_20160623_22_43_43_Pro.jpg"},
