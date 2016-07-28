@@ -2,13 +2,6 @@ class Pet < ApplicationRecord
 	belongs_to :user
 	has_many :albums, dependent: :destroy
 	has_many :photos, through: :albums
-	# has_many :active_relationships,
-	# 	class_name: "Relationship",
-	# 	foreign_key: "follower_id",
-	# 	dependent: :destroy
-	# has_many :following, through: :active_relationships, source: :followed
-
-	# has_and_belongs_to_many :users
 
 	has_many :followers, dependent: :destroy
 
