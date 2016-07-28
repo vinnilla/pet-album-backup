@@ -28,7 +28,7 @@ class UsersController < ApplicationController
       end
     end
 
-    
+
     # while @pet_array.length < 50 and @pet_array.length < (@pets.length-@following_pets.length) do
     #   @test = true
     #   @num = rand(@pets.length).to_i
@@ -47,7 +47,6 @@ class UsersController < ApplicationController
 
     #   if @test
     #     #find album belonging to pet
-    #     puts @pets[@num].id
     #     @album = Album.where(pet_id: @pets[@num].id)
     #     if @album.length != 0
     #       #find one photo
@@ -58,8 +57,27 @@ class UsersController < ApplicationController
     #     end
     #   end
     # end
-  end
 
+    @pets.each do |pet|
+      test = true
+      @following_pets.each do |following|
+        if following.id == pet.id
+          test = false
+        end
+      end
+      if test
+        albums = Album.where(pet_id: pet.id)
+        if albums.length != 0
+          photos = Photo.where(album_id: albums[0].id)
+          if photos.length != 0
+            @photo_array << photos[0]
+            @pet_array << pet
+          end
+        end
+      end
+    end
+
+  end
 
 end
     # @pets.each do |pet|
