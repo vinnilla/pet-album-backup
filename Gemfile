@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.2.3'
 # Carrier Wave
 gem 'carrierwave'
 gem 'mini_magick'
