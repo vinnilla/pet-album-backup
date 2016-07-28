@@ -28,24 +28,24 @@ class UsersController < ApplicationController
       end
     end
 
-    @pets.each do |pet|
-      test = true
-      @following_pets.each do |following|
-        if following.id == pet.id
-          test = false
-        end
-      end
-      if test
-        albums = Album.where(pet_id: pet.id)
-        if albums.length != 0
-          photos = Photo.where(album_id: albums[0].id)
-          if photos.length != 0
-            @photo_array << photos[0]
-            @pet_array << pet
-          end
-        end
-      end
-    end
+    # @pets.each do |pet|
+    #   test = true
+    #   @following_pets.each do |following|
+    #     if following.id == pet.id
+    #       test = false
+    #     end
+    #   end
+    #   if test
+    #     albums = Album.where(pet_id: pet.id)
+    #     if albums.length != 0
+    #       photos = Photo.where(album_id: albums[0].id)
+    #       if photos.length != 0
+    #         @photo_array << photos[0]
+    #         @pet_array << pet
+    #       end
+    #     end
+    #   end
+    # end
 
   end
 
