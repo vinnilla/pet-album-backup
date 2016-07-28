@@ -38907,3 +38907,479 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
   Rendered /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (136.4ms)
+Started GET "/" for ::1 at 2016-07-28 12:14:13 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#main as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFollower Load (1.2ms)[0m  [1m[34mSELECT "followers".* FROM "followers" WHERE "followers"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mPet Load (3.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 37]]
+  [1m[36mAlbum Load (1.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 37]]
+  [1m[36mPhoto Load (1.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 38]]
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 39]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 39]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 40]]
+  [1m[36mPet Load (0.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 36]]
+  [1m[36mAlbum Load (1.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 36]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 37]]
+  [1m[36mPet Load (3.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 22]]
+  [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 22]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 23]]
+  [1m[36mPet Load (2.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 1]]
+  [1m[36mAlbum Load (1.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 1]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 1]]
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 2]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 2]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 3]]
+  [1m[36mPet Load (0.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 40]]
+  [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 40]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 41]]
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 23]]
+  [1m[36mAlbum Load (1.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 23]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 24]]
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  [1m[36mAlbum Load (1.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 4]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 5]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 12]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 13]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 13]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 14]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 15]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 16]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 16]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 17]]
+  [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 17]]
+  [1m[36mPhoto Load (1.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 18]]
+  [1m[36mAlbum Load (1.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 18]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 19]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 19]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 20]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 20]]
+  [1m[36mPhoto Load (1.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 21]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 21]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 22]]
+  [1m[36mAlbum Load (1.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 8]]
+  [1m[36mPhoto Load (2.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 9]]
+  [1m[36mAlbum Load (1.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 7]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 8]]
+  [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 6]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 7]]
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 14]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 15]]
+  [1m[36mAlbum Load (1.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 10]]
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 11]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 11]]
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 12]]
+  [1m[36mAlbum Load (1.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 9]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 10]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 3]]
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 4]]
+  [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 5]]
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 6]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 24]]
+  [1m[36mPhoto Load (2.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 25]]
+  [1m[36mAlbum Load (1.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 25]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 26]]
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 26]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 27]]
+  [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 27]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 28]]
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 28]]
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 29]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 29]]
+  [1m[36mPhoto Load (1.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 30]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 30]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 31]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 31]]
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 32]]
+  [1m[36mAlbum Load (1.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 32]]
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 33]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 33]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 34]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 34]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 35]]
+  [1m[36mAlbum Load (1.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 35]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 36]]
+  Rendering users/main.html.erb within layouts/application
+  Rendered users/main.html.erb within layouts/application (116.8ms)
+  Rendered application/_search_bar.html.erb (2.4ms)
+  Rendered application/_header.html.erb (8.9ms)
+  Rendered application/_footer.html.erb (0.9ms)
+Completed 200 OK in 1888ms (Views: 1247.2ms | ActiveRecord: 143.9ms)
+
+
+Started GET "/main.css" for ::1 at 2016-07-28 12:14:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered collection of /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (47.6ms)
+  Rendered /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (18.9ms)
+  Rendering /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.8ms)
+  Rendered /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (166.5ms)
+Started GET "/pets" for ::1 at 2016-07-28 12:15:08 -0700
+Processing by PetsController#main as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pets/main.html.erb within layouts/application
+  [1m[36mPet Load (1.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered pets/main.html.erb within layouts/application (9.2ms)
+  Rendered application/_search_bar.html.erb (3.3ms)
+  Rendered application/_header.html.erb (10.6ms)
+  Rendered application/_footer.html.erb (0.8ms)
+Completed 200 OK in 208ms (Views: 173.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-07-28 12:15:11 -0700
+Processing by PetsController#new as HTML
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pets/new.html.erb within layouts/application
+  Rendered pets/new.html.erb within layouts/application (44.0ms)
+  Rendered application/_search_bar.html.erb (3.3ms)
+  Rendered application/_header.html.erb (11.4ms)
+  Rendered application/_footer.html.erb (0.7ms)
+Completed 200 OK in 264ms (Views: 249.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users" for ::1 at 2016-07-28 12:15:22 -0700
+Processing by UsersController#main as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFollower Load (0.7ms)[0m  [1m[34mSELECT "followers".* FROM "followers" WHERE "followers"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 37]]
+  [1m[36mAlbum Load (1.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 37]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 38]]
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 39]]
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 39]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 40]]
+  [1m[36mPet Load (1.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 36]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 36]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 37]]
+  [1m[36mPet Load (0.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 22]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 22]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 23]]
+  [1m[36mPet Load (1.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 1]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 1]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 1]]
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 2]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 2]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 3]]
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 40]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 40]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 41]]
+  [1m[36mPet Load (0.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 23]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 23]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 24]]
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  [1m[36mAlbum Load (1.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 4]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 5]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 12]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 13]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 13]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 14]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 15]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 16]]
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 16]]
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 17]]
+  [1m[36mAlbum Load (1.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 17]]
+  [1m[36mPhoto Load (2.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 18]]
+  [1m[36mAlbum Load (1.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 18]]
+  [1m[36mPhoto Load (2.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 19]]
+  [1m[36mAlbum Load (1.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 19]]
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 20]]
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 20]]
+  [1m[36mPhoto Load (2.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 21]]
+  [1m[36mAlbum Load (1.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 21]]
+  [1m[36mPhoto Load (1.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 22]]
+  [1m[36mAlbum Load (1.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 8]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 9]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 7]]
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 8]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 6]]
+  [1m[36mPhoto Load (2.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 7]]
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 14]]
+  [1m[36mPhoto Load (1.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 15]]
+  [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 10]]
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 11]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 11]]
+  [1m[36mPhoto Load (1.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 12]]
+  [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 9]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 10]]
+  [1m[36mAlbum Load (1.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 3]]
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 4]]
+  [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 5]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 6]]
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 24]]
+  [1m[36mPhoto Load (1.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 25]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 25]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 26]]
+  [1m[36mAlbum Load (2.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 26]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 27]]
+  [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 27]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 28]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 28]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 29]]
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 29]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 30]]
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 30]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 31]]
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 31]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 32]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 32]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 33]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 33]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 34]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 34]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 35]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 35]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 36]]
+  Rendering users/main.html.erb within layouts/application
+  Rendered users/main.html.erb within layouts/application (87.9ms)
+  Rendered application/_search_bar.html.erb (2.0ms)
+  Rendered application/_header.html.erb (7.1ms)
+  Rendered application/_footer.html.erb (0.9ms)
+Completed 200 OK in 590ms (Views: 229.3ms | ActiveRecord: 96.8ms)
+
+
+Started GET "/pets" for ::1 at 2016-07-28 12:15:25 -0700
+Processing by PetsController#main as HTML
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pets/main.html.erb within layouts/application
+  [1m[36mPet Load (1.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered pets/main.html.erb within layouts/application (8.1ms)
+  Rendered application/_search_bar.html.erb (1.9ms)
+  Rendered application/_header.html.erb (10.7ms)
+  Rendered application/_footer.html.erb (0.8ms)
+Completed 200 OK in 149ms (Views: 126.7ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/pets/1" for ::1 at 2016-07-28 12:15:27 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 1]]
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (8.6ms)
+  Rendered application/_search_bar.html.erb (1.9ms)
+  Rendered application/_header.html.erb (6.7ms)
+  Rendered application/_footer.html.erb (0.7ms)
+Completed 200 OK in 149ms (Views: 114.4ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/pets/1/albums/1" for ::1 at 2016-07-28 12:15:28 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"pet_id"=>"1", "id"=>"1"}
+  [1m[36mAlbum Load (2.6ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering albums/show.html.erb within layouts/application
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 1]]
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 1]]
+  Rendered albums/show.html.erb within layouts/application (12.2ms)
+  Rendered application/_search_bar.html.erb (2.0ms)
+  Rendered application/_header.html.erb (7.1ms)
+  Rendered application/_footer.html.erb (0.8ms)
+Completed 200 OK in 140ms (Views: 114.0ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/pets/1/albums/1/photos/1" for ::1 at 2016-07-28 12:15:31 -0700
+Processing by PhotosController#show as HTML
+  Parameters: {"pet_id"=>"1", "album_id"=>"1", "id"=>"1"}
+  [1m[36mPhoto Load (7.7ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mPet Load (1.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (14.0ms)
+  Rendered application/_search_bar.html.erb (2.0ms)
+  Rendered application/_header.html.erb (9.9ms)
+  Rendered application/_footer.html.erb (0.7ms)
+Completed 200 OK in 145ms (Views: 122.3ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/pets/1/albums/1/photos/1/edit" for ::1 at 2016-07-28 12:15:32 -0700
+Processing by PhotosController#edit as HTML
+  Parameters: {"pet_id"=>"1", "album_id"=>"1", "id"=>"1"}
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/edit.html.erb within layouts/application
+  Rendered photos/edit.html.erb within layouts/application (19.8ms)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered application/_search_bar.html.erb (1.9ms)
+  Rendered application/_header.html.erb (13.0ms)
+  Rendered application/_footer.html.erb (0.9ms)
+Completed 200 OK in 141ms (Views: 129.4ms | ActiveRecord: 3.9ms)
+
+
+Started PATCH "/pets/1/albums/1/photos/1" for ::1 at 2016-07-28 12:15:44 -0700
+Processing by PhotosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RYQDl4CcXDWTuEjw/LNIJVAskbFWJxaJTTKfzi3FCEFn+t/dMcTKmGkJdHKfEF+x8K/6RRznR8Z6dntqFbzo/g==", "photo"=>{"description"=>"Profile", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f3e558f7790 @tempfile=#<Tempfile:/tmp/RackMultipart20160728-24221-sy19cf.jpg>, @original_filename="WP_20160713_20_22_04_Pro.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[avatar]\"; filename=\"WP_20160713_20_22_04_Pro.jpg\"\r\nContent-Type: image/jpeg\r\n">, "remote_avatar_url"=>""}, "commit"=>"Save", "pet_id"=>"1", "album_id"=>"1", "id"=>"1"}
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "photos" SET "avatar" = $1, "updated_at" = $2 WHERE "photos"."id" = $3[0m  [["avatar", "WP_20160713_20_22_04_Pro.jpg"], ["updated_at", 2016-07-28 19:15:45 UTC], ["id", 1]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/1/albums/1/photos/1
+Completed 302 Found in 1201ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/pets/1/albums/1/photos/1" for ::1 at 2016-07-28 12:15:45 -0700
+Processing by PhotosController#show as HTML
+  Parameters: {"pet_id"=>"1", "album_id"=>"1", "id"=>"1"}
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mPet Load (0.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (11.6ms)
+  Rendered application/_search_bar.html.erb (1.8ms)
+  Rendered application/_header.html.erb (6.8ms)
+  Rendered application/_footer.html.erb (0.7ms)
+Completed 200 OK in 129ms (Views: 120.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/pets/1/albums/1/photos/main.css" for ::1 at 2016-07-28 12:15:45 -0700
+Processing by PhotosController#show as CSS
+  Parameters: {"pet_id"=>"1", "album_id"=>"1", "id"=>"main"}
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Photo with 'id'=main):
+  
+app/controllers/photos_controller.rb:57:in `set_photo'
+app/controllers/photos_controller.rb:24:in `show'
+  Rendering /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (23.2ms)
+  Rendering /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.4ms)
+  Rendering /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /home/vincent/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.1ms)
+Started GET "/users" for ::1 at 2016-07-28 12:15:47 -0700
+Processing by UsersController#main as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFollower Load (1.3ms)[0m  [1m[34mSELECT "followers".* FROM "followers" WHERE "followers"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mPet Load (0.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 37]]
+  [1m[36mAlbum Load (2.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 37]]
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 38]]
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 39]]
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 39]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 40]]
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 36]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 36]]
+  [1m[36mPhoto Load (1.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 37]]
+  [1m[36mPet Load (1.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 22]]
+  [1m[36mAlbum Load (1.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 22]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 23]]
+  [1m[36mPet Load (1.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 1]]
+  [1m[36mAlbum Load (1.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 1]]
+  [1m[36mPhoto Load (1.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 1]]
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 2]]
+  [1m[36mAlbum Load (1.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 2]]
+  [1m[36mPhoto Load (1.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 3]]
+  [1m[36mPet Load (2.0ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 40]]
+  [1m[36mAlbum Load (1.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 40]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 41]]
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 23]]
+  [1m[36mAlbum Load (1.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 23]]
+  [1m[36mPhoto Load (1.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 24]]
+  [1m[36mPet Load (2.0ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  [1m[36mAlbum Load (1.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 4]]
+  [1m[36mPhoto Load (1.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 5]]
+  [1m[36mAlbum Load (1.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 12]]
+  [1m[36mPhoto Load (2.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 13]]
+  [1m[36mAlbum Load (1.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 13]]
+  [1m[36mPhoto Load (1.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 14]]
+  [1m[36mAlbum Load (1.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 15]]
+  [1m[36mPhoto Load (1.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 16]]
+  [1m[36mAlbum Load (1.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 16]]
+  [1m[36mPhoto Load (1.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 17]]
+  [1m[36mAlbum Load (1.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 17]]
+  [1m[36mPhoto Load (1.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 18]]
+  [1m[36mAlbum Load (1.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 18]]
+  [1m[36mPhoto Load (1.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 19]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 19]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 20]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 20]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 21]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 21]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 22]]
+  [1m[36mAlbum Load (1.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 8]]
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 9]]
+  [1m[36mAlbum Load (1.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 7]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 8]]
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 6]]
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 7]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 14]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 15]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 10]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 11]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 11]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 12]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 9]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 10]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 3]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 4]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 5]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 6]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 24]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 25]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 25]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 26]]
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 26]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 27]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 27]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 28]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 28]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 29]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 29]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 30]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 30]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 31]]
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 31]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 32]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 32]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 33]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 33]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 34]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 34]]
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 35]]
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."pet_id" = $1[0m  [["pet_id", 35]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."album_id" = $1[0m  [["album_id", 36]]
+  Rendering users/main.html.erb within layouts/application
+  Rendered users/main.html.erb within layouts/application (48.7ms)
+  Rendered application/_search_bar.html.erb (2.1ms)
+  Rendered application/_header.html.erb (10.1ms)
+  Rendered application/_footer.html.erb (0.8ms)
+Completed 200 OK in 484ms (Views: 155.8ms | ActiveRecord: 104.5ms)
+
+
