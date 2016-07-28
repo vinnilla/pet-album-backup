@@ -1,20 +1,144 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-p1 = Pet.create(name: "Mewtwo", gender: "Female", breed: "Pokemon",bio: "Disastrously powerful")
-	a1 = Album.create(title: "Profile", pet_id: p1.id)
-	p1 = Photo.create(description: "Profile", album_id: a1.id, avatar: "http://media.animevice.com/uploads/0/697/79673-mewtwo1.jpg")
-
-p2 = Pet.create(name: "Soba", gender: "Male", breed: "Short Hair Cat", bio: "Loves to drool and knead")
-p3 = Pet.create(name: "Ramen", gender: "Male", breed: "German Shepard", bio: "Likes noodles")
-p4 = Pet.create(name: "Meatloaf", gender: "Female", breed: "Chihuahua", bio: "Likes turkey")
-p5 = Pet.create(name: "Hash", gender: "Female", breed: "Hamster", bio: "A bundle of energy")
-p6 = Pet.create(name: "Flipper", gender: "Male", breed: "Seal", bio: "Sings like one of the greats")
-p7 = Pet.create(name: "Trunks", gender: "Male", breed: "African Elephant", bio: "Power level over 9000")
-p8 = Pet.create(name: "Penelope", gender: "Female", breed: "Bengal Cat", bio: "Spends the greater portion of each day pretending to be part of the curtains")
-p9 = Pet.create(name: "Rex", gender: "Male", breed: "Husky", bio: "Eats anything and everything")
+User.create!([
+  {email: "random@random.com", encrypted_password: "$2a$11$OqwpNfZR5p/ZNZFSCl6qj.o39owQ5wbjeUxF0zonOnL1FcLccFG6m", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-07-28 19:33:32", last_sign_in_at: "2016-07-28 19:33:32", current_sign_in_ip: "::1", last_sign_in_ip: "::1"},
+  {email: "test@test.com", encrypted_password: "$2a$11$7IbCWS3Nht9UZVsG.Ee9lOvSIXj7KlzitYsfMiaK7i/41qg2G1QYS", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 4, current_sign_in_at: "2016-07-28 19:41:17", last_sign_in_at: "2016-07-28 05:27:19", current_sign_in_ip: "::1", last_sign_in_ip: "::1"},
+  {email: "vincentckhuang@gmail.com", encrypted_password: "$2a$11$OrmoobGtoLaejoZxV.YRIeFHhiGMNgvSbul/ecyC/gyJMVhj9OYFq", reset_password_token: "b8f37fbb1e2a36f3b407dc755bfc56e936da94e35969d2a76036faa154a11e19", reset_password_sent_at: "2016-07-28 19:47:23", remember_created_at: nil, sign_in_count: 7, current_sign_in_at: "2016-07-28 21:12:27", last_sign_in_at: "2016-07-28 19:50:04", current_sign_in_ip: "::1", last_sign_in_ip: "::1"}
+])
+Album.create!([
+  {title: "Profile", description: "", likes: nil, pet_id: 1},
+  {title: "Sleep", description: "", likes: nil, pet_id: 1},
+  {title: "profile", description: "", likes: nil, pet_id: 2},
+  {title: "profile", description: "", likes: nil, pet_id: 3},
+  {title: "profile", description: "", likes: nil, pet_id: 4},
+  {title: "profile", description: "", likes: nil, pet_id: 5},
+  {title: "profile", description: "", likes: nil, pet_id: 6},
+  {title: "profile", description: "", likes: nil, pet_id: 7},
+  {title: "profile", description: "", likes: nil, pet_id: 8},
+  {title: "profile", description: "", likes: nil, pet_id: 9},
+  {title: "profile", description: "", likes: nil, pet_id: 10},
+  {title: "profile", description: "", likes: nil, pet_id: 11},
+  {title: "profile", description: "", likes: nil, pet_id: 12},
+  {title: "profile", description: "", likes: nil, pet_id: 13},
+  {title: "profile", description: "", likes: nil, pet_id: 14},
+  {title: "profile", description: "", likes: nil, pet_id: 15},
+  {title: "profile", description: "", likes: nil, pet_id: 16},
+  {title: "profile", description: "", likes: nil, pet_id: 17},
+  {title: "profile", description: "", likes: nil, pet_id: 18},
+  {title: "profile", description: "", likes: nil, pet_id: 19},
+  {title: "profile", description: "", likes: nil, pet_id: 20},
+  {title: "profile", description: "", likes: nil, pet_id: 21},
+  {title: "profile", description: "", likes: nil, pet_id: 22},
+  {title: "profile", description: "", likes: nil, pet_id: 23},
+  {title: "profile", description: "", likes: nil, pet_id: 24},
+  {title: "profile", description: "", likes: nil, pet_id: 25},
+  {title: "profile", description: "", likes: nil, pet_id: 26},
+  {title: "profile", description: "", likes: nil, pet_id: 27},
+  {title: "profile", description: "", likes: nil, pet_id: 28},
+  {title: "profile", description: "", likes: nil, pet_id: 29},
+  {title: "profile", description: "", likes: nil, pet_id: 30},
+  {title: "profile", description: "", likes: nil, pet_id: 31},
+  {title: "profile", description: "", likes: nil, pet_id: 32},
+  {title: "profile", description: "", likes: nil, pet_id: 33},
+  {title: "profile", description: "", likes: nil, pet_id: 34},
+  {title: "profile", description: "", likes: nil, pet_id: 35},
+  {title: "profile", description: "", likes: nil, pet_id: 36},
+  {title: "profile", description: "", likes: nil, pet_id: 37},
+  {title: "profile", description: "", likes: nil, pet_id: 39},
+  {title: "profile", description: "", likes: nil, pet_id: 40}
+])
+Follower.create!([
+  {user_id: 1, pet_id: 37},
+  {user_id: 1, pet_id: 39},
+  {user_id: 1, pet_id: 36},
+  {user_id: 1, pet_id: 22},
+  {user_id: 1, pet_id: 1},
+  {user_id: 1, pet_id: 2},
+  {user_id: 1, pet_id: 40},
+  {user_id: 1, pet_id: 23},
+  {user_id: 2, pet_id: 29},
+  {user_id: 3, pet_id: 1}
+])
+Pet.create!([
+  {name: "Soba", gender: "Male", breed: "Domestic Short Hair", bio: "Loves to knead and drool", species: "Cat", search_terms: "Soba Male Domestic Short Hair Cat", user_id: 1},
+  {name: "Russell", gender: "Male", breed: "Toy Poodle Mix", bio: "", species: "Dog", search_terms: "Russell Male Toy Poodle Mix Dog", user_id: 1},
+  {name: "Dane", gender: "", breed: "", bio: "", species: "", search_terms: "Dane   ", user_id: 2},
+  {name: "Cole", gender: "Male", breed: "Turkish Angora", bio: "Trying to break the stereotype of black cats being unlucky and therefore undeserving of love", species: "Cat", search_terms: "Cole Male Turkish Angora Cat", user_id: 2},
+  {name: "Marmalade", gender: "Male", breed: "Ginger Tabby", bio: "Ready to take on the world!", species: "Cat", search_terms: "Marmalade Male Ginger Tabby Cat", user_id: 2},
+  {name: "Agee", gender: "Female", breed: "Polar Bear", bio: "", species: "Bear", search_terms: "Agee Female Polar Bear Bear", user_id: 2},
+  {name: "Ben", gender: "", breed: "Trash Panda", bio: "", species: "Raccoon", search_terms: "Ben  Trash Panda Raccoon", user_id: 2},
+  {name: "Ramen", gender: "Male", breed: "German Shepherd", bio: "", species: "Dog", search_terms: "Ramen Male German Shepard Dog", user_id: 2},
+  {name: "Meatloaf", gender: "Female", breed: "Chihuahua", bio: "", species: "Dog", search_terms: "Meatloaf Female Chihuahua Dog", user_id: 2},
+  {name: "Honey", gender: "Female", breed: "Short Hair", bio: "", species: "Hamster", search_terms: "Honey Female Short Hair Hamster", user_id: 2},
+  {name: "Nylah", gender: "Female", breed: "Bengal Cat", bio: "", species: "Cat", search_terms: "Nylah Female Bengal Cat Cat", user_id: 2},
+  {name: "Bambu", gender: "Male", breed: "Bengal Cat", bio: "", species: "Cat", search_terms: "Bambu Male Bengal Cat Cat", user_id: 2},
+  {name: "Memphis", gender: "Female", breed: "Siberian Husky", bio: "A puppy with unlimited energy.", species: "Dog", search_terms: "Memphis Female Siberian Husky Dog", user_id: 2},
+  {name: "Shelby", gender: "Female", breed: "Siberian Husky", bio: "A diva", species: "Dog", search_terms: "Shelby Female Siberian Husky Dog", user_id: 2},
+  {name: "Oakley", gender: "Female", breed: "Siberian Husky", bio: "The gentle giant.", species: "Dog", search_terms: "Oakley Female Siberian Husky Dog", user_id: 2},
+  {name: "Harley", gender: "", breed: "", bio: "", species: "Dog", search_terms: "Harley   ", user_id: 2},
+  {name: "Pebble", gender: "", breed: "Tibetan Mastiff", bio: "", species: "Dog", search_terms: "Pebble  Tibetan Mastiff Dog", user_id: 2},
+  {name: "Bernie", gender: "", breed: "Bernese Mountain Dog", bio: "", species: "Dog", search_terms: "Bernie   Dog", user_id: 2},
+  {name: "Randy", gender: "", breed: "", bio: "", species: "Dog", search_terms: "Randy   Dog", user_id: 2},
+  {name: "Furball", gender: "", breed: "", bio: "", species: "Cat", search_terms: "Furball   Cat", user_id: 2},
+  {name: "General Kitty", gender: "", breed: "", bio: "", species: "Cat", search_terms: "General Kitty   Cat", user_id: 2},
+  {name: "Fat Cat", gender: "", breed: "", bio: "", species: "Cat", search_terms: nil, user_id: 2},
+  {name: "Corbin", gender: "Male", breed: "", bio: "", species: "Human", search_terms: nil, user_id: 2},
+  {name: "Finn", gender: "", breed: "", bio: "", species: "Cat", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "Andean Mountain Cat", bio: "", species: "", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "Pallas Cat", bio: "", species: "", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "Fishing Cat", bio: "", species: "", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "Sand Cat", bio: "", species: "", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "Margay", bio: "", species: "", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "Black-footed Cat", bio: "", species: "", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "Chinese Mountain Cat", bio: "", species: "", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "African Golden Cat", bio: "", species: "", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "Caracal", bio: "", species: "", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "Flat-Headed Cat", bio: "", species: "", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "Kodkod", bio: "", species: "Cat", search_terms: nil, user_id: 2},
+  {name: "Curiosity", gender: "", breed: "", bio: "", species: "Cat", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "Puppy", bio: "", species: "", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "", bio: "", species: "dog", search_terms: nil, user_id: 2},
+  {name: "", gender: "", breed: "Programmer", bio: "", species: "", search_terms: nil, user_id: 2}
+])
+Photo.create!([
+  {description: "arm rest", likes: nil, album_id: 2, avatar: "WP_20160623_22_43_43_Pro.jpg"},
+  {description: "hugs", likes: nil, album_id: 2, avatar: "WP_20160716_14_55_08_Pro.jpg"},
+  {description: "profile", likes: nil, album_id: 3, avatar: "WP_20160602_12_30_55_Pro.jpg"},
+  {description: "profile", likes: nil, album_id: 4, avatar: "37974-Tabby-cat-portrait-white-background.jpg"},
+  {description: "profile", likes: nil, album_id: 5, avatar: "4927528676_87eeaeb293_o.jpg"},
+  {description: "profile", likes: nil, album_id: 6, avatar: "cat-portraits3.jpeg"},
+  {description: "profile", likes: nil, album_id: 7, avatar: "13704302_1563307740644877_1891684852_n.jpg"},
+  {description: "profile", likes: nil, album_id: 8, avatar: "11931031_525785390907953_2058408278_a.jpg"},
+  {description: "profile", likes: nil, album_id: 9, avatar: "13774757_1656410354579483_108987708_n.jpg"},
+  {description: "profile", likes: nil, album_id: 10, avatar: "Siberian-Husky-dogs-13788924-1024-768.jpg"},
+  {description: "profile", likes: nil, album_id: 11, avatar: "tibetan_mastiff_3.jpg"},
+  {description: "profile", likes: nil, album_id: 12, avatar: "Bernese_Mountain_breed.jpg"},
+  {description: "profile", likes: nil, album_id: 13, avatar: "maxresdefault.jpg"},
+  {description: "profile", likes: nil, album_id: 14, avatar: "cats-cole-and-marmalade-explain.jpg"},
+  {description: "profile", likes: nil, album_id: 15, avatar: "Alaskan_Malamute_Dog_2.jpg"},
+  {description: "profile", likes: nil, album_id: 16, avatar: "polar-bear-in-pool_1935314i.jpg"},
+  {description: "profile", likes: nil, album_id: 17, avatar: "1398474767000-pet-raccoon.jpg"},
+  {description: "profile", likes: nil, album_id: 18, avatar: "Animals_Dogs_German_Shepherd_on_the_shore_025466_.jpg"},
+  {description: "profile", likes: nil, album_id: 19, avatar: "Chihuahua-4.jpg"},
+  {description: "profile", likes: nil, album_id: 20, avatar: "Hamster3.jpg"},
+  {description: "profile", likes: nil, album_id: 21, avatar: "c0661a1f13eeffdf821d68798d89c5a8.jpg"},
+  {description: "profile", likes: nil, album_id: 22, avatar: "a0a55f7dcf68c4080249cf71f88f65c4.jpg"},
+  {description: "profile", likes: nil, album_id: 23, avatar: "NUyttbn.gif"},
+  {description: "profile", likes: nil, album_id: 23, avatar: "funnypicture-heavy-breathing-cat.jpg"},
+  {description: "profile", likes: nil, album_id: 24, avatar: "54270191958_ac3322f71dc8250e0601_512.png"},
+  {description: "profile", likes: nil, album_id: 25, avatar: "IMG_4308.JPG"},
+  {description: "profile", likes: nil, album_id: 26, avatar: "mtbl1cr.jpg"},
+  {description: "profile", likes: nil, album_id: 27, avatar: "pM2DvuM.jpg"},
+  {description: "profile", likes: nil, album_id: 28, avatar: "ekduGmd.jpg"},
+  {description: "profile", likes: nil, album_id: 29, avatar: "M5zcPuk.jpg"},
+  {description: "profile", likes: nil, album_id: 30, avatar: "swDXY2v.jpg"},
+  {description: "profile", likes: nil, album_id: 31, avatar: "L9ZftiD.jpg"},
+  {description: "profile", likes: nil, album_id: 32, avatar: "w2tuouc.jpg"},
+  {description: "profile", likes: nil, album_id: 33, avatar: "xW2K0rt.jpg"},
+  {description: "profile", likes: nil, album_id: 34, avatar: "zXWbLuW.jpg"},
+  {description: "profile", likes: nil, album_id: 35, avatar: "zXWbLuW.jpg"},
+  {description: "profile", likes: nil, album_id: 36, avatar: "7Vf94Tu.jpg"},
+  {description: "profile", likes: nil, album_id: 37, avatar: "ntwBDRI.gif"},
+  {description: "profile", likes: nil, album_id: 38, avatar: "Dog-GIFs-of-All-Time-27.gif"},
+  {description: "profile", likes: nil, album_id: 40, avatar: "Funny-Dog-GIF.gif"},
+  {description: "profile", likes: nil, album_id: 41, avatar: "oie_5181838bU3HJXJp.gif"},
+  {description: "Profile", likes: nil, album_id: 1, avatar: "WP_20160713_20_22_04_Pro.jpg"}
+])

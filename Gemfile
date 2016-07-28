@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 ruby '2.2.3'
+
+# SEED DUMP
+gem 'seed_dump'
 # Carrier Wave
 gem 'carrierwave'
 gem 'mini_magick'
