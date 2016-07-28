@@ -29,6 +29,7 @@ Rails.application.configure do
   #why no work?
   config.assets.initialize_on_precompile = false
   config.assets.enabled = true
+  config.server_static_assets = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
