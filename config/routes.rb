@@ -55,7 +55,8 @@ Rails.application.routes.draw do
   ##########
   #FOLLOWING
   ##########
-  post 'pets/:id' => 'pets#follow', as: :follow_pet
+  post 'pets/:id/follow' => 'pets#follow', as: :follow_pet
+  delete 'pets/:id/unfollow' => 'pets#unfollow', as: :unfollow_pet
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

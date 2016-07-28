@@ -198,6 +198,19 @@ body {
 .follow:hover{
 	color: red !important;
 }
+.followed {
+	position: relative;
+	top: 35px;
+	left: 15px;
+	color: red !important;
+	font-size: 20px !important;
+	z-index: 1;
+	opacity: 1;
+	text-decoration: none !important;
+}
+.followed:hover {
+	color: white !important;
+}
 
 
 /*PINTEREST LAYOUT*/

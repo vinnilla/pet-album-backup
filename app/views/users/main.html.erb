@@ -4,11 +4,30 @@
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
+
+<% if user_signed_in? %>
+	<div id="wrapper">
+		<h1>Following</h1>
+		<div id="columns">
+			<% @following_pets.length.times do |x| %>
+				<div class="pin">
+					<%= link_to "", unfollow_pet_path(@following_pets[x].id), class:"fa fa-heart followed", :method => :delete %>
+					<%= image_tag @following_photos[x].avatar_url(:thumb).to_s %><br>
+					<%= link_to @following_pets[x].name, pet_path(@following_pets[x].id) %>
+					<p><%="#{@following_pets[x].gender} #{@following_pets[x].breed}"%></p>
+					<p><%=@following_pets[x].bio%></p>
+				</div>
+			<%end%>
+		</div>
+	</div>
+<% end %>
+
 <div id="wrapper">
+	<h1>Cool Pets</h1>
 	<div id="columns">	
 		<% (@pet_array.length).times do |x| %>
 			<div class="pin">
-				<%= link_to "", follow_pet_path(@pet_array[x].id), class:"fa fa-heart-o follow" %>
+				<%= link_to "", follow_pet_path(@pet_array[x].id), class:"fa fa-heart-o follow", :method => :post %>
 				<%= image_tag @photo_array[x].avatar_url(:thumb).to_s %><br>
 				<%= link_to @pet_array[x].name, pet_path(@pet_array[x].id) %>
 				<p><%="#{@pet_array[x].gender} #{@pet_array[x].breed}"%></p>

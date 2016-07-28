@@ -56,7 +56,18 @@ class PetsController < ApplicationController
 
   def follow
     @user = current_user
-    @user.active_relationships.create(followed_id: set_pet.id)
+    @pet = set_pet
+    @follow = Follower.new(user_id: @user.id, pet_id: @pet.id)
+    if @follow.save
+      redirect_to users_path
+    end
+  end
+
+  def unfollow
+    @pet = set_pet
+    follow = Follower.where(user_id: current_user.id, pet_id: @pet.id)
+    follow[0].destroy
+    redirect_to users_path
   end
 
   private
