@@ -6,20 +6,22 @@
 <% end %>
 
 <% if user_signed_in? %>
-	<div id="wrapper">
-		<h1>Following</h1>
-		<div id="columns">
-			<% @following_pets.length.times do |x| %>
-				<div class="pin">
-					<%= link_to "", unfollow_pet_path(@following_pets[x].id), class:"fa fa-heart followed", :method => :delete %>
-					<%= image_tag @following_photos[x].avatar_url(:thumb).to_s %><br>
-					<%= link_to @following_pets[x].name, pet_path(@following_pets[x].id) %>
-					<p><%="#{@following_pets[x].gender} #{@following_pets[x].breed}"%></p>
-					<p><%=@following_pets[x].bio%></p>
-				</div>
-			<%end%>
+	<% if @following_pets.length > 0 %>
+		<div id="wrapper">
+				<h1>Following</h1>
+			<div id="columns">
+				<% @following_pets.length.times do |x| %>
+					<div class="pin">
+						<%= link_to "", unfollow_pet_path(@following_pets[x].id), class:"fa fa-heart followed", :method => :delete %>
+						<%= image_tag @following_photos[x].avatar_url(:thumb).to_s %><br>
+						<%= link_to @following_pets[x].name, pet_path(@following_pets[x].id) %>
+						<p><%="#{@following_pets[x].gender} #{@following_pets[x].breed}"%></p>
+						<p><%=@following_pets[x].bio%></p>
+					</div>
+				<%end%>
+			</div>
 		</div>
-	</div>
+	<% end %>
 <% end %>
 
 <div id="wrapper">
