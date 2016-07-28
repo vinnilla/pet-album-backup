@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.2.3'
 
+# ASSET PIPELINE
+gem 'rails_serve_static_assets', group: [:production]
 # SEED DUMP
 gem 'seed_dump'
 # Carrier Wave
@@ -55,4 +57,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'rails_12factor', group: :production
+gem 'rails_12factor', group: [:production]
