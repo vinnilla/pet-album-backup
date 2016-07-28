@@ -28,35 +28,36 @@ class UsersController < ApplicationController
       end
     end
 
-    while @pet_array.length < 50 and @pet_array.length < (@pets.length-@following_pets.length) do
-      @test = true
-      @num = rand(@pets.length).to_i
+    
+    # while @pet_array.length < 50 and @pet_array.length < (@pets.length-@following_pets.length) do
+    #   @test = true
+    #   @num = rand(@pets.length).to_i
 
-      @pet_indexes.each do |x|
-        if x == @num
-          @test = false
-        end
-      end
+    #   @pet_indexes.each do |x|
+    #     if x == @num
+    #       @test = false
+    #     end
+    #   end
 
-      @following_pets.each do |pet|
-        if pet.id == @pets[@num].id
-          @test = false
-        end
-      end
+    #   @following_pets.each do |pet|
+    #     if pet.id == @pets[@num].id
+    #       @test = false
+    #     end
+    #   end
 
-      if @test
-        #find album belonging to pet
-        puts @pets[@num].id
-        @album = Album.where(pet_id: @pets[@num].id)
-        if @album.length != 0
-          #find one photo
+    #   if @test
+    #     #find album belonging to pet
+    #     puts @pets[@num].id
+    #     @album = Album.where(pet_id: @pets[@num].id)
+    #     if @album.length != 0
+    #       #find one photo
           
-          @photo_array << Photo.where(album_id: @album[0].id)[0]
-          @pet_array << @pets[@num]
-          @pet_indexes << @num
-        end
-      end
-    end
+    #       @photo_array << Photo.where(album_id: @album[0].id)[0]
+    #       @pet_array << @pets[@num]
+    #       @pet_indexes << @num
+    #     end
+    #   end
+    # end
   end
 
 
