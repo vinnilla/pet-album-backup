@@ -1,8 +1,4 @@
-User.create!([
-  {email: "random@random.com", encrypted_password: "$2a$11$OqwpNfZR5p/ZNZFSCl6qj.o39owQ5wbjeUxF0zonOnL1FcLccFG6m", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-07-28 19:33:32", last_sign_in_at: "2016-07-28 19:33:32", current_sign_in_ip: "::1", last_sign_in_ip: "::1"},
-  {email: "test@test.com", encrypted_password: "$2a$11$7IbCWS3Nht9UZVsG.Ee9lOvSIXj7KlzitYsfMiaK7i/41qg2G1QYS", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 4, current_sign_in_at: "2016-07-28 19:41:17", last_sign_in_at: "2016-07-28 05:27:19", current_sign_in_ip: "::1", last_sign_in_ip: "::1"},
-  {email: "vincentckhuang@gmail.com", encrypted_password: "$2a$11$OrmoobGtoLaejoZxV.YRIeFHhiGMNgvSbul/ecyC/gyJMVhj9OYFq", reset_password_token: "b8f37fbb1e2a36f3b407dc755bfc56e936da94e35969d2a76036faa154a11e19", reset_password_sent_at: "2016-07-28 19:47:23", remember_created_at: nil, sign_in_count: 7, current_sign_in_at: "2016-07-28 21:12:27", last_sign_in_at: "2016-07-28 19:50:04", current_sign_in_ip: "::1", last_sign_in_ip: "::1"}
-])
+
 Album.create!([
   {title: "Profile", description: "", likes: nil, pet_id: 1},
   {title: "Sleep", description: "", likes: nil, pet_id: 1},
