@@ -11,9 +11,9 @@ class PetsController < ApplicationController
   
   def create
     @pet = Pet.new(pet_params)
-    @pet.search_terms = "#{@pet.name} #{@pet.gender} #{@pet.breed} #{@pet.species}"
     if @pet.save
-      redirect_to pets_path
+      @pet.search_terms = "#{@pet.name} #{@pet.gender} #{@pet.breed} #{@pet.species}"
+      redirect_to new_album_path @pet.id
     else
       render :new
     end
@@ -40,7 +40,8 @@ class PetsController < ApplicationController
 
   def update
   	@pet = set_pet
-  	if @pet.update_attributes(pet_params)
+    if @pet.update_attributes(pet_params)
+      @pet.search_terms = "#{@pet.name} #{@pet.gender} #{@pet.breed} #{@pet.species}"
   		redirect_to pet_path
   	else
   		render :edit

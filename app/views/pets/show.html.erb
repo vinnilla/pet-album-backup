@@ -7,6 +7,8 @@
 	
 	<div class="pet last">
 		<% if @pet.user_id == current_user.id %>
+			<%= link_to 'edit', edit_pet_path(@pet.id) %> &nbsp; &nbsp;
+			<%= link_to 'delete', pet_path(@pet.id), :method => :delete %> &nbsp; &nbsp;
 			<%= link_to "Create Album", new_album_path(@pet.id) %>
 		<%end %>
 	</div>
