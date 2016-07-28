@@ -28,6 +28,7 @@ Rails.application.configure do
   #HEROKU
   #why no work?
   config.assets.initialize_on_precompile = false
+  config.assets.enabled = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
