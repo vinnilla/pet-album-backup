@@ -159,6 +159,10 @@ body {
 	text-align: left;
 }
 
+/*DEVISE MESSAGES*/
+.notice, .alert {
+	text-align: center;
+}
 
 /*SEARCH BAR*/
 .clear {
