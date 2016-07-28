@@ -6,7 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-p1 = Pet.create(name: "Mewtwo", gender: "Female", breed: "Pokemon", bio: "Disastrously powerful")
+p1 = Pet.create(name: "Mewtwo", gender: "Female", breed: "Pokemon",bio: "Disastrously powerful")
+	a1 = Album.create(title: "Profile", pet_id: p1.id)
+	p1 = Photo.create(description: "Profile", album_id: a1.id, avatar: "http://media.animevice.com/uploads/0/697/79673-mewtwo1.jpg")
+
 p2 = Pet.create(name: "Soba", gender: "Male", breed: "Short Hair Cat", bio: "Loves to drool and knead")
 p3 = Pet.create(name: "Ramen", gender: "Male", breed: "German Shepard", bio: "Likes noodles")
 p4 = Pet.create(name: "Meatloaf", gender: "Female", breed: "Chihuahua", bio: "Likes turkey")
