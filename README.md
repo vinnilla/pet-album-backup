@@ -5,4 +5,6 @@ https://pet-album.herokuapp.com/
 Since Heroku's database is not persistent, images uploaded to my app on Heroku may randomly disappear.
 
 Gist for user controller that was responsible for pushing the data necessary for the landing page.
+https://gist.github.com/vinnilla/bf7952eb51f808218181081a34af7b0a
+
 <script src="https://gist.github.com/vinnilla/bf7952eb51f808218181081a34af7b0a.js"></script>
