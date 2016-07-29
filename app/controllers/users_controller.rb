@@ -47,8 +47,8 @@ class UsersController < ApplicationController
     #   end
     # end
 
-    
-    # while loop to randomize pets show in main page
+
+    # while loop to randomize pets shown in main page
     while @pet_array.length < 50 and @pet_array.length < (@pets.length-@following_pets.length) do
       @test = true
       @num = rand(@pets.length).to_i

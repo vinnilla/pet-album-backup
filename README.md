@@ -1,24 +1,8 @@
-# README
+#Pet Album
+This Ruby on Rails app is designed to be a combination of Pinterest and Instagram for pets. The main functionality of this web application is the ability to create pet profiles and add albums and photos to that profile. Other users can view your pet profiles and decide whether or not they should follow you.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://pet-album.herokuapp.com/
+Since Heroku's database is not persistent, images uploaded to my app on Heroku may randomly disappear.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Gist for user controller that was responsible for pushing the data necessary for the landing page.
+<script src="https://gist.github.com/vinnilla/bf7952eb51f808218181081a34af7b0a.js"></script>
