@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: pet_app_production
+  database: pet_app_production_2
   username: pet_app
   password: <%= ENV['PET_APP_DATABASE_PASSWORD'] %>
