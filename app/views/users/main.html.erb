@@ -8,7 +8,9 @@
 <% if user_signed_in? %>
 	<% if @following_pets.length > 0 %>
 		<div id="wrapper">
+			<!-- 	
 				<h1>Following</h1>
+			 -->
 			<div id="columns">
 				<% @following_pets.length.times do |x| %>
 					<div class="pin">
@@ -25,7 +27,9 @@
 <% end %>
 
 <div id="wrapper">
+<!-- 
 	<h1>Cool Pets</h1>
+ -->
 	<div id="columns">	
 		<% (@pet_array.length).times do |x| %>
 			<div class="pin">
